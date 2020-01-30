@@ -17,7 +17,10 @@ let package = Package(
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
             name: "EmarsysSDK",
-            targets: ["EmarsysSDK", "NotificationService"]),
+            targets: ["EmarsysSDK"]),
+        .library(
+            name: "EmarsysNotificationExtension",
+            targets: ["NotificationService"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.

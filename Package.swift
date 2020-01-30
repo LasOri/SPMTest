@@ -30,7 +30,7 @@ let package = Package(
             name: "EmarsysSDK",
             dependencies: [],
             path: "Sources",
-            exclude: ["Tests"],
+            exclude: ["Tests", "MobileEngage/RichNotificationExtension"],
             cSettings: [
                 .headerSearchPath("Core"),
                 .headerSearchPath("Core/Batch"),
@@ -79,8 +79,6 @@ let package = Package(
                 .headerSearchPath("MobileEngage/ResponseHandlers"),
                 .headerSearchPath("MobileEngage/ResponseHandlers/InappMessage"),
                 .headerSearchPath("MobileEngage/RichNotification"),
-                .headerSearchPath("MobileEngage/RichNotificationExtension"),
-                .headerSearchPath("MobileEngage/RichNotificationExtension/Validators"),
                 .headerSearchPath("MobileEngage/Storage"),
                 .headerSearchPath("MobileEngage/Storage/IAM"),
                 .headerSearchPath("MobileEngage/Storage/IAM/ButtonClick"),
@@ -92,5 +90,13 @@ let package = Package(
                 .headerSearchPath("Predict/Requests"),
                 .headerSearchPath("Predict/ResponseHandlers"),
         ]),
+        .target(
+            name: "NotificationService",
+            dependencies: [],
+            path: "Sources/MobileEngage/RichNotificationExtension",
+                cSettings: [
+                    .headerSearchPath("Validators"),
+                    .headerSearchPath("../../Core/Categories"),
+        ])
     ]
 )

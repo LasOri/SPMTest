@@ -8,24 +8,21 @@
 import PackageDescription
 
 let package = Package(
-    name: "EmarsysSDKPackage",
+    name: "EmarsysSDK",
     platforms: [
         .iOS(.v11),
     ],
     products: [
         .library(
             name: "EmarsysSDKLibrary",
-            targets: ["EmarsysSDKTarget"]),
+            targets: ["EmarsysSDK"]),
         .library(
             name: "EmarsysNotificationExtensionLibrary",
-            targets: ["EmarsysSDKTarget"]),
-    ],
-    dependencies: [
+            targets: ["EmarsysSDK"]),
     ],
     targets: [
         .target(
-            name: "EmarsysSDKTarget",
-            dependencies: [],
+            name: "EmarsysSDK",
             path: "Sources",
             cSettings: [
                 .headerSearchPath("**")

@@ -20,7 +20,7 @@ let package = Package(
             targets: ["EmarsysSDKTarget"]),
         .library(
             name: "EmarsysNotificationExtensionLibrary",
-            targets: ["EmarsysNotificationExtensionTarget"]),
+            targets: ["EmarsysSDKTarget"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -33,7 +33,7 @@ let package = Package(
             name: "EmarsysSDKTarget",
             dependencies: [],
             path: "Sources",
-            exclude: ["Tests", "MobileEngage/RichNotificationExtension", "ExtensionAPI"],
+            exclude: ["Tests"],
             publicHeadersPath: "SdkAPI",
             cSettings: [
                 .headerSearchPath("SdkAPI"),
@@ -94,18 +94,8 @@ let package = Package(
                 .headerSearchPath("Predict/Recommendations"),
                 .headerSearchPath("Predict/Requests"),
                 .headerSearchPath("Predict/ResponseHandlers"),
-        ]),
-        .target(
-            name: "EmarsysNotificationExtensionTarget",
-            dependencies: [],
-            path: "Sources",
-            exclude: ["Tests", "SdkAPI", "Core", "Core/Batch", "Core/Categories", "Core/ConnectionWatchdog", "Core/ConnectionWatchdog/ThirdParty", "Core/Database", "Core/Database/Trigger", "Core/Flipper", "Core/Log", "Core/Log/LogEntry", "Core/Mappers", "Core/Middlewares", "Core/Models", "Core/Networking", "Core/Operation", "Core/Providers", "Core/Repository", "Core/Repository/RequestModel", "Core/Repository/Shard", "Core/Repository/Specifications", "Core/ResponseHandlers", "Core/Schedulers", "Core/Store", "Core/Validators", "Core/Worker", "EmarsysSDK", "EmarsysSDK/AppStart", "EmarsysSDK/DeepLink", "EmarsysSDK/DI", "EmarsysSDK/Endpoints", "EmarsysSDK/FlipperFeatures", "EmarsysSDK/RequestTools", "EmarsysSDK/Setup", "MobileEngage/Category", "MobileEngage/IAM", "MobileEngage/IAM/JSCommands", "MobileEngage/IAM/Providers", "MobileEngage/IAM/UI", "MobileEngage/Inbox", "MobileEngage/Internal", "MobileEngage/Mappers", "MobileEngage/Push", "MobileEngage/RequestTools", "MobileEngage/ResponseHandlers", "MobileEngage/ResponseHandlers/InappMessage", "MobileEngage/RichNotification", "MobileEngage/Storage", "MobileEngage/Storage/IAM", "MobileEngage/Storage/IAM/ButtonClick", "MobileEngage/Storage/IAM/DisplayedIAM", "Predict", "Predict/Mapper", "Predict/Models", "Predict/Recommendations", "Predict/Requests", "Predict/ResponseHandlers"],
-            publicHeadersPath: "ExtensionAPI",
-            cSettings: [
-                .headerSearchPath("ExtensionAPI"),
                 .headerSearchPath("MobileEngage/RichNotificationExtension"),
                 .headerSearchPath("MobileEngage/RichNotificationExtension/Validators"),
-                .headerSearchPath("Core/Categories"),
         ])
     ]
 )

@@ -4,7 +4,7 @@
 
 #import <Foundation/Foundation.h>
 #import "EMSBlocks.h"
-#import "Setup/EMSConfig.h"
+#import "EMSConfig.h"
 #import "EMSPushNotificationProtocol.h"
 #import "EMSInboxProtocol.h"
 #import "EMSInAppProtocol.h"

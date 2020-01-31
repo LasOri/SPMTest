@@ -34,7 +34,12 @@ let package = Package(
             dependencies: [],
             path: "Sources",
             exclude: ["Tests", "MobileEngage/RichNotificationExtension"],
+            publicHeadersPath: "SdkAPI",
             cSettings: [
+                .headerSearchPath("SdkAPI/CoreAPI"),
+                .headerSearchPath("SdkAPI/EmarsysSDKAPI"),
+                .headerSearchPath("SdkAPI/MobileEngageAPI"),
+                .headerSearchPath("SdkAPI/PredictAPI"),
                 .headerSearchPath("Core"),
                 .headerSearchPath("Core/Batch"),
                 .headerSearchPath("Core/Categories"),
@@ -97,9 +102,11 @@ let package = Package(
             name: "NotificationService",
             dependencies: [],
             path: "Sources/MobileEngage/RichNotificationExtension",
-                cSettings: [
-                    .headerSearchPath("Validators"),
-                    .headerSearchPath("../../Core/Categories"),
+            publicHeadersPath: "ExtensionAPI",
+            cSettings: [
+                .headerSearchPath("Validators"),
+                .headerSearchPath("../../Core/Categories"),
+                .headerSearchPath("../../ExtensionAPI"),
         ])
     ]
 )

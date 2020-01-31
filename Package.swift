@@ -37,9 +37,9 @@ let package = Package(
             publicHeadersPath: "SdkAPI",
             cSettings: [
                 .headerSearchPath("SdkAPI/CoreAPI"),
-                .headerSearchPath("SdkAPI/EmarsysSDKAPI"),
                 .headerSearchPath("SdkAPI/MobileEngageAPI"),
                 .headerSearchPath("SdkAPI/PredictAPI"),
+                .headerSearchPath("SdkAPI/EmarsysSDKAPI"),
                 .headerSearchPath("Core"),
                 .headerSearchPath("Core/Batch"),
                 .headerSearchPath("Core/Categories"),

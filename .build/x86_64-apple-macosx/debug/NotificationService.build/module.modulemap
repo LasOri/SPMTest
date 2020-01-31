@@ -1,0 +1,4 @@
+module NotificationService {
+    umbrella "/Users/lori/Work/sdk/SPMTest/Sources/ExtensionAPI"
+    export *
+}

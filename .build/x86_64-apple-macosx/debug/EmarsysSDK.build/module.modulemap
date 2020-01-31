@@ -1,0 +1,4 @@
+module EmarsysSDK {
+    umbrella "/Users/lori/Work/sdk/SPMTest/Sources/SdkAPI"
+    export *
+}

@@ -9,18 +9,18 @@
 import PackageDescription
 
 let package = Package(
-    name: "EmarsysSDK",
+    name: "EmarsysSDKPackage",
     platforms: [
         .iOS(.v11),
     ],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
-            name: "EmarsysSDK",
-            targets: ["EmarsysSDK"]),
+            name: "EmarsysSDKLibrary",
+            targets: ["EmarsysSDKTarget"]),
         .library(
-            name: "EmarsysNotificationExtension",
-            targets: ["NotificationService"]),
+            name: "EmarsysNotificationExtensionLibrary",
+            targets: ["EmarsysNotificationExtensionTarget"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -30,7 +30,7 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
-            name: "EmarsysSDK",
+            name: "EmarsysSDKTarget",
             dependencies: [],
             path: "Sources",
             exclude: ["Tests", "MobileEngage/RichNotificationExtension", "ExtensionAPI"],
@@ -96,7 +96,7 @@ let package = Package(
                 .headerSearchPath("Predict/ResponseHandlers"),
         ]),
         .target(
-            name: "NotificationService",
+            name: "EmarsysNotificationExtensionTarget",
             dependencies: [],
             path: "Sources",
             exclude: ["Tests", "SdkAPI", "Core", "Core/Batch", "Core/Categories", "Core/ConnectionWatchdog", "Core/ConnectionWatchdog/ThirdParty", "Core/Database", "Core/Database/Trigger", "Core/Flipper", "Core/Log", "Core/Log/LogEntry", "Core/Mappers", "Core/Middlewares", "Core/Models", "Core/Networking", "Core/Operation", "Core/Providers", "Core/Repository", "Core/Repository/RequestModel", "Core/Repository/Shard", "Core/Repository/Specifications", "Core/ResponseHandlers", "Core/Schedulers", "Core/Store", "Core/Validators", "Core/Worker", "EmarsysSDK", "EmarsysSDK/AppStart", "EmarsysSDK/DeepLink", "EmarsysSDK/DI", "EmarsysSDK/Endpoints", "EmarsysSDK/FlipperFeatures", "EmarsysSDK/RequestTools", "EmarsysSDK/Setup", "MobileEngage/Category", "MobileEngage/IAM", "MobileEngage/IAM/JSCommands", "MobileEngage/IAM/Providers", "MobileEngage/IAM/UI", "MobileEngage/Inbox", "MobileEngage/Internal", "MobileEngage/Mappers", "MobileEngage/Push", "MobileEngage/RequestTools", "MobileEngage/ResponseHandlers", "MobileEngage/ResponseHandlers/InappMessage", "MobileEngage/RichNotification", "MobileEngage/Storage", "MobileEngage/Storage/IAM", "MobileEngage/Storage/IAM/ButtonClick", "MobileEngage/Storage/IAM/DisplayedIAM", "Predict", "Predict/Mapper", "Predict/Models", "Predict/Recommendations", "Predict/Requests", "Predict/ResponseHandlers"],

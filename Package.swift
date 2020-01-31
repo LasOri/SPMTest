@@ -33,7 +33,7 @@ let package = Package(
             name: "EmarsysSDK",
             dependencies: [],
             path: "Sources",
-            exclude: ["Tests", "MobileEngage/RichNotificationExtension"],
+            exclude: ["Tests", "MobileEngage/RichNotificationExtension", "ExtensionAPI"],
             publicHeadersPath: "SdkAPI",
             cSettings: [
                 .headerSearchPath("SdkAPI"),
@@ -99,7 +99,7 @@ let package = Package(
             name: "NotificationService",
             dependencies: [],
             path: "Sources",
-            exclude: ["Tests", "SdkAPI/CoreAPI", "SdkAPI/EmarsysSDKAPI", "SdkAPI/MobileEngageAPI", "SdkAPI/PredictAPI", "Core", "Core/Batch", "Core/Categories", "Core/ConnectionWatchdog", "Core/ConnectionWatchdog/ThirdParty", "Core/Database", "Core/Database/Trigger", "Core/Flipper", "Core/Log", "Core/Log/LogEntry", "Core/Mappers", "Core/Middlewares", "Core/Models", "Core/Networking", "Core/Operation", "Core/Providers", "Core/Repository", "Core/Repository/RequestModel", "Core/Repository/Shard", "Core/Repository/Specifications", "Core/ResponseHandlers", "Core/Schedulers", "Core/Store", "Core/Validators", "Core/Worker", "EmarsysSDK", "EmarsysSDK/AppStart", "EmarsysSDK/DeepLink", "EmarsysSDK/DI", "EmarsysSDK/Endpoints", "EmarsysSDK/FlipperFeatures", "EmarsysSDK/RequestTools", "EmarsysSDK/Setup", "MobileEngage/Category", "MobileEngage/IAM", "MobileEngage/IAM/JSCommands", "MobileEngage/IAM/Providers", "MobileEngage/IAM/UI", "MobileEngage/Inbox", "MobileEngage/Internal", "MobileEngage/Mappers", "MobileEngage/Push", "MobileEngage/RequestTools", "MobileEngage/ResponseHandlers", "MobileEngage/ResponseHandlers/InappMessage", "MobileEngage/RichNotification", "MobileEngage/Storage", "MobileEngage/Storage/IAM", "MobileEngage/Storage/IAM/ButtonClick", "MobileEngage/Storage/IAM/DisplayedIAM", "Predict", "Predict/Mapper", "Predict/Models", "Predict/Recommendations", "Predict/Requests", "Predict/ResponseHandlers"],
+            exclude: ["Tests", "SdkAPI", "Core", "Core/Batch", "Core/Categories", "Core/ConnectionWatchdog", "Core/ConnectionWatchdog/ThirdParty", "Core/Database", "Core/Database/Trigger", "Core/Flipper", "Core/Log", "Core/Log/LogEntry", "Core/Mappers", "Core/Middlewares", "Core/Models", "Core/Networking", "Core/Operation", "Core/Providers", "Core/Repository", "Core/Repository/RequestModel", "Core/Repository/Shard", "Core/Repository/Specifications", "Core/ResponseHandlers", "Core/Schedulers", "Core/Store", "Core/Validators", "Core/Worker", "EmarsysSDK", "EmarsysSDK/AppStart", "EmarsysSDK/DeepLink", "EmarsysSDK/DI", "EmarsysSDK/Endpoints", "EmarsysSDK/FlipperFeatures", "EmarsysSDK/RequestTools", "EmarsysSDK/Setup", "MobileEngage/Category", "MobileEngage/IAM", "MobileEngage/IAM/JSCommands", "MobileEngage/IAM/Providers", "MobileEngage/IAM/UI", "MobileEngage/Inbox", "MobileEngage/Internal", "MobileEngage/Mappers", "MobileEngage/Push", "MobileEngage/RequestTools", "MobileEngage/ResponseHandlers", "MobileEngage/ResponseHandlers/InappMessage", "MobileEngage/RichNotification", "MobileEngage/Storage", "MobileEngage/Storage/IAM", "MobileEngage/Storage/IAM/ButtonClick", "MobileEngage/Storage/IAM/DisplayedIAM", "Predict", "Predict/Mapper", "Predict/Models", "Predict/Recommendations", "Predict/Requests", "Predict/ResponseHandlers"],
             publicHeadersPath: "ExtensionAPI",
             cSettings: [
                 .headerSearchPath("ExtensionAPI"),
